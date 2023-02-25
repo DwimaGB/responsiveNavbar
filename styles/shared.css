@@ -1,0 +1,24 @@
+
+
+button{
+    all: unset;
+}
+
+.sr-only{
+    position: absolute;
+    left: -9999px;
+}
+
+/* utility classes */
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.text-white{
+    color: hsl(0,0%,100%);
+}
+
+.letter-spacing-2{
+    letter-spacing: 2px;
+}

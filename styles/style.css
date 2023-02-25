@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;700&display=swap');
+@import 'hamburger.css';
+@import 'shared.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(220, 55%, 7%);
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+/* Primary header */
+
+.logo {
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+.primary-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding-block: 2rem; */
+}
+
+.mobile-nav-toggle {
+    display: none;
+    padding: 0.3em 0.4em;
+
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background-color: transparent;
+    width: 2rem;
+    aspect-ratio: 1;
+
+    z-index: 9999;
+}
+
+.mobile-nav-toggle:hover{
+    cursor: pointer;
+}
+
+/* .mobile-nav-toggle:focus{
+    outline: hsl(0, 0%, 100%) 1px solid;
+} */
+
+.primary-navigation {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem 4rem;
+
+    background-color: hsla(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(1rem);
+
+
+}
+
+
+@media (max-width: 35em) {
+    .primary-navigation {
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+
+        flex-direction: column;
+        gap: 2em;
+        padding: min(20vh, 10rem) 4rem;
+
+        transform: translateX(100%);
+        transition: transform 400ms ease-out;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+    }
+}
+
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a>span[aria-hidden="true"] {
+    font-weight: 700;
+    margin-inline-end: 0.75em;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/script.js" defer></script>
+</head>
+<body>
+    <header class="primary-header">
+        <div>
+            <p class="logo text-white uppercase letter-spacing-2">Logo</p>
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span>
+            <svg class="hamburger-icon" viewbox="0 0 100 100" fill="white">
+                <rect class="line top" width="100" height="10" y="20"></rect>
+                <rect class="line middle" width="100" height="10" y="50"></rect>
+                <rect class="line bottom" width="100" height="10" y="80"></rect>
+            </svg>
+        </button>
+        <nav>
+            <ul class="primary-navigation" data-visible="false">
+                <li><a href="#" class="text-white uppercase letter-spacing-2"><span aria-hidden="true">00</span>Page</a></li>
+                <li><a href="#" class="text-white uppercase letter-spacing-2"><span aria-hidden="true">01</span>Page</a></li>
+                <li><a href="#" class="text-white uppercase letter-spacing-2"><span aria-hidden="true">02</span>Page</a></li>
+                <li><a href="#" class="text-white uppercase letter-spacing-2"><span aria-hidden="true">03</span>Page</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

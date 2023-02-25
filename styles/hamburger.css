@@ -1,0 +1,28 @@
+
+/* animation */
+
+.hamburger-icon .line{
+    transform-origin: center;
+    transition: y 150ms ease-in 150ms, rotate 150ms ease-in, opacity 0ms 150ms;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .hamburger-icon :is(.top, .bottom){
+    y: 50;
+    transition: y 150ms ease-in, rotate 150ms 150ms;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .hamburger-icon .middle{
+    opacity: 0;
+    transition: opacity 0ms 150ms;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .hamburger-icon .top{
+    rotate: 45deg;
+    transform: translateX(5%);
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .hamburger-icon .bottom{
+    rotate: -45deg;
+    transform: translateX(-5%);
+}   
+
